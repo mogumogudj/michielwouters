@@ -3,11 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michiel Wouters Portfolio</title>
+    <title>Michiel Wouters | architect</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
+    <!-- Contact button -->
+    <a href="mailto:michielwouters@outlook.be" class="contact-button">Contact</a>
+
+    <!-- Sticky Navigation -->
+   <!-- Sticky Navigation (desktop) -->
+<nav class="sticky-nav desktop-nav">
+    <a href="academic.html" id="academic-link">Academic</a>
+    <span class="divider">|</span>
+    <a href="work.html" id="work-link">Work</a>
+</nav>
+
+<!-- Hamburger Menu (mobile) -->
+<div class="mobile-header">
+    <div class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+    <a href="academic.html" id="mobile-academic">Academic</a>
+    <a href="work.html" id="mobile-work">Work</a>
+    <a href="mailto:michielwouters@outlook.be" id="mobile-contact" class="mobile-contact-button">Contact</a>
+</div>
+
+    <!-- Home Section -->
+    <header class="home-section">
+        <h1 class="title" id="MichielWouters">Michiel Wouters</h1>
+        <h2 class="subtitle">Graduated Architect</h2>
+        <p class="location">(Leuven, Belgium)</p>
+        <div class="scroll-down">
+            <a href="#about" class="fa-sharp fa-regular fa-arrow-down"><span id="scroll-down"> Scroll Down</span></a>
+        </div>
+    </header>
+
+    <!-- Full Width Image -->
+    <section class="hero-image">
+        <img src="images/mik.png" alt="Michiel Wouters">
+    </section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="about-text">
+        <h3>As a young architect, I focus on producing top-notch and impactful work.</h3>
+    </div>
+
+    <div class="about-info">
+        <div class="divider-vertical-about"></div>
+
+        <div class="right-content">
+            <div class="spinning-images">
+                <img src="images/test-mik.png" alt="">
+            </div>
+
+            <div class="socials">
+                <h4 id="about-me">(About Me)</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank" class="fab fa-instagram" alt="Instagram"></a>
+                    <a href="#" target="_blank" class="fab fa-linkedin-in" alt="LinkedIn"></a>
+                    <a href="#" target="_blank" class="fa-solid fa-envelope" alt="Email"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- <hr class="section-divider"> -->
+
+<!-- What I Do Section -->
+<section class="what-i-do" id="what-i-do">
+    <div class="what-title">
+        (What I do) <span class="arrow">⤳</span>
+    </div>
+    <div class="capabilities-grid">
+        <!-- Vertical Divider -->
+        <div class="divider-vertical"></div>
+
+        <!-- Horizontal Divider -->
+        <div class="divider-horizontal"></div>
+
+        <div class="capability">
+            <h4>Architecture</h4>
+            <p>Designing meaningful spaces with cultural and social impact.</p>
+        </div>
+        <div class="capability">
+            <h4>Urban Projects</h4>
+            <p>Shaping public environments and nightlife spaces.</p>
+        </div>
+        <div class="capability">
+            <h4>Concept Development</h4>
+            <p>Bringing creative concepts to life from sketch to realization.</p>
+        </div>
+        <div class="capability">
+            <h4>Research</h4>
+            <p>Exploring cultural and architectural contexts to enrich designs.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Work Scroller -->
+<section class="contact-scroll">
+    <div class="scrolling-contact-wrapper">
+        <a class="scrolling-contact" href="work.html">
+            Work Work Work Work Work Work Work Work
+        </a>
+        <a class="scrolling-contact" href="work.html">
+            Work Work Work Work Work Work Work Work
+        </a>
+    </div>
+</section>
+
+    <!-- Footer Image -->
+    <section class="footer-video">
+        <video src="images/Wouters_Michiel_Trailer.mp4" autoplay loop muted playsinline alt="Footer Video"></video>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Michiel Wouters - Website built by <a href="https://wolfverelst.com" target="_blank">Wolf Ver Elst</a></p>
+    </footer>
 
     <script src="main.js"></script>
 </body>
