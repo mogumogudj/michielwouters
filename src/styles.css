@@ -123,7 +123,7 @@ p {
     top: 20px;
     right: 20px;
     background: none;
-    padding: 20px 28px;
+    padding: 12px 20px;
     background-color: var(--primary-color);
     color: var(--background-color);
     border-radius: 32px;
@@ -896,17 +896,67 @@ p {
 .project-gallery {
     display: flex;
     gap: 40px;
-    padding: 20px;
+    padding: 20px 20px;
 }
 
 .gallery-column {
     flex: 1;
+    padding: 20px;
 }
+
+
 
 .gallery-item {
     position: relative;
     margin-bottom: 30px;
 }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px; /* Space before next section */
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #Bachelor-title, #Master-title {
+    text-align: center;
+}
+
+.home-section {
+    padding: 32px 20px 20px;
+}
+
+
+.home-section .title {
+    font-size: 4.5rem;
+    line-height: 4rem;
+}
+
+
+.home-section .subtitle {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+}
+
+.home-section .location {
+    font-size: 0.8rem;
+}
+
+.scroll-down span {
+    font-size: 0.8rem;
+}
+
+.scroll-down a {
+    font-size: 1rem;
+    right: -20px; /* Adjusted for smaller screen */
+}
+
 
 .gallery-item img {
     width: 100%;
