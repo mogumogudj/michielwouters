@@ -953,7 +953,7 @@ p {
 }
 
 .scroll-down a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     right: -20px; /* Adjusted for smaller screen */
 }
 
@@ -1197,4 +1197,6 @@ p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
 }
