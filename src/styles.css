@@ -53,7 +53,7 @@
     --background-color: #F5F3F0;
     --DQ-purple: #6358E3;
     --Blue-grey1: #BCC7D9;
-    --Blue-grey2: ##ccd4e2;
+    --Blue-grey2: #ccd4e2;
     --Blue-grey3: #dde2eb;
     --Blue-grey4: #eff2f6;
     --Lime: #c4fb62;
@@ -1000,6 +1000,8 @@ p {
     opacity: 1;
 }
 
+}
+
 .contact-section {
     text-align: center;
     padding: 8px 8px;
@@ -1007,9 +1009,8 @@ p {
 }
 
 .contact-section h1 {
-    font-size: 8rem;
+    font-size: 12rem;
     margin-bottom: 20px;
-    
 }
 
 .contact-info {
@@ -1048,6 +1049,10 @@ p {
         align-items: center;
         text-align: center;
     }
+
+    .contact-section h1 {
+    font-size: 9rem;
+}
 
 
 }
@@ -1197,6 +1202,4 @@ p {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
 }
