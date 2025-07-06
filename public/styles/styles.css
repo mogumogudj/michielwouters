@@ -74,6 +74,10 @@
     font-weight: bolder;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .black-text {
     color: var(--primary-color);
 }

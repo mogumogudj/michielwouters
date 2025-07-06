@@ -122,12 +122,14 @@ p {
     font-size: 8rem;
     font-weight: 200;
     line-height: 7rem;
+    margin-bottom: 1.5rem;
     text-transform: normal;
 }
 
 .project-home-section .subtitle {
     font-size: 3.5rem;
     font-weight: 200;
+    line-height: 3.4rem;
     text-transform: uppercase;
 }
 
