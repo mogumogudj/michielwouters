@@ -857,7 +857,12 @@ p {
     font-family: var(--font-custom);
 }
 
-.project-info h2, p {
+.project-info-h2 {
+    color: var(--Blue-grey4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.project-info-p {
     color: var(--Blue-grey4);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
