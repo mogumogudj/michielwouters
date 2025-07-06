@@ -163,6 +163,7 @@ p {
     line-height: 1.2;
     font-family: var(--font-morion);
     color: var(--primary-color);
+    text-shadow: none;
 }
 
 @media (max-width: 768px) {
