@@ -459,6 +459,7 @@ p {
     width: 350px; /* Slightly bigger image on desktop */
     height: auto;
     overflow: hidden;
+    padding: 12px;
 }
 
 .spinning-images img {
@@ -707,6 +708,7 @@ p {
     margin-right: 50px;
     color: var(--primary-color);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 @keyframes scrollContact {
@@ -1230,4 +1232,21 @@ p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+.download-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: var(--DQ-purple);
+    text-decoration: none;
+    font-family: var(--font-morion);
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.download-button:hover {
+    transform:skewX(-5deg);
+    text-decoration: underline;
 }
