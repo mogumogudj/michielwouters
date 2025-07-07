@@ -195,11 +195,13 @@ p {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    aspect-ratio: 1 / 1;
 }
 
 .project-grid-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Makes sure the image fills the tile nicely */
     transition: transform 0.3s ease;
     display: block;
 }
