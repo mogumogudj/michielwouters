@@ -359,7 +359,7 @@ p {
 }
 
 .scroll-down {
-    margin-top: -1.8rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -630,7 +630,7 @@ p {
     top: 0;
     bottom: 0;
     left: 48%;
-    height: 620px;
+    height: 560px;
     width: 1px;
     background: black;
     transform: scaleY(0);
