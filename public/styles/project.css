@@ -245,6 +245,9 @@ p {
 .project-fullscreen-viewer img {
     max-width: 90%;
     max-height: 90%;
+    cursor: grab;
+    touch-action: none;
+    transition: transform 0.2s ease;
 }
 
 .project-close-button {
