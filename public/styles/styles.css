@@ -864,6 +864,7 @@ p {
 
 .project-info-p {
     color: var(--Blue-grey4);
+    line-height: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
