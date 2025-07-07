@@ -312,3 +312,19 @@ p {
         font-size: 1.2rem;
     }
 }
+
+.download-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: var(--DQ-purple);
+    text-decoration: none;
+    font-family: var(--font-morion);
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.download-button:hover {
+    transform:skewX(-5deg);
+    text-decoration: underline;
+}
