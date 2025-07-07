@@ -186,11 +186,31 @@ p {
     transition: width 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+.sticky-nav #work-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: var(--DQ-purple);
+    transition: width 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
 .sticky-nav #academic-link:hover {
     color: var(--DQ-purple);
 }
 
 .sticky-nav #academic-link:hover::after {
+    width: 100%;
+}
+
+.sticky-nav #work-link:hover {
+    color: var(--DQ-purple);
+}
+
+.sticky-nav #work-link:hover::after {
     width: 100%;
 }
 
