@@ -742,6 +742,8 @@ p {
 
 .footer p {
     color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 100px;
 }
 
 /* Mobile */
@@ -1227,6 +1229,7 @@ p {
         text-align: center;
         justify-content: center;
         width: 100%;
+        margin-top: 20px;
     }
 }
 
