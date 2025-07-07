@@ -171,7 +171,7 @@ p {
 }
 
 .sticky-nav #work-link {
-    color: gray;
+    color: var(--primary-color);
 }
 
 .sticky-nav #academic-link::after {
@@ -285,7 +285,7 @@ p {
 }
 
 #mobile-work {
-    color: grey;
+    color: var(--primary-color);
 }
 
 .mobile-menu.open {
@@ -303,6 +303,7 @@ p {
     color: var(--primary-color);
     font-weight: bold;
     font-family: var(--font-custom);
+    font-size: 2.2rem;
 }
 
 
