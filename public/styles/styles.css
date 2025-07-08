@@ -945,7 +945,8 @@ p {
   .download-button {
      text-align: center;
      justify-content: center;
-     width: 100%;
+     width: 96%;
      margin-top: 20px;
+     gap: 0;
   }
 }
