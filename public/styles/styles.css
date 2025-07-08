@@ -338,76 +338,97 @@ p {
 
 /* =========================
     ABOUT SECTION
-    ========================= */
+========================= */
 .about-section {
   display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  padding: 50px 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  gap: 60px;
   flex-wrap: wrap;
-  gap: 520px;
 }
+
+/* LEFT TEXT BLOCK */
 .about-text {
-  flex: 0 1 auto;
+  flex: 1;
+  max-width: 600px;
 }
 .about-text h3 {
-  font-size: 6rem;
-  line-height: 1.1;
-  max-width: 830px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin: 0;
 }
-.about-text.animate h3 {
-  opacity: 1;
-  transform: translateY(0);
-}
-.about-info {
-  display: flex;
-  align-items: stretch;
-  gap: 40px;
-}
+
+/* VERTICAL DIVIDER */
 .divider-vertical-about {
   width: 1px;
-  background: var(--primary-color);
+  background-color: black;
+  height: auto;
+  align-self: stretch;
 }
+
+/* RIGHT CONTENT BLOCK */
+.about-info {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+  flex: 1;
+  max-width: 600px;
+}
+
 .right-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 160px;
+  gap: 30px;
 }
+
+/* IMAGE */
 .spinning-images {
-  width: 350px;
+  width: 250px;
   height: auto;
-  overflow: hidden;
-  padding: 12px;
 }
 .spinning-images img {
   width: 100%;
   height: auto;
   display: block;
 }
-.socials {
-  text-align: left;
-}
+
+/* ABOUT ME TEXT */
 .socials h4 {
   font-size: 14px;
   text-transform: lowercase;
   margin-bottom: 10px;
 }
+
+/* DOWNLOAD BUTTONS */
+.download-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.download-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* SOCIAL ICONS */
 .social-icons {
   display: flex;
   gap: 15px;
-  justify-content: flex-start;
 }
 .social-icons a {
   text-decoration: none;
-  background-color: var(--primary-color);
-  color: var(--background-color);
+  background-color: black;
+  color: white;
   padding: 12px;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  font-size: 18px;
 }
 
 /* =========================
@@ -767,7 +788,7 @@ p {
   text-decoration: none;
   border-radius: 32px;
   font-family: var(--font-custom);
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: background-color 0.3s, transform 0.3s;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -812,36 +833,44 @@ p {
 }
 
 /* =========================
-    RESPONSIVE MEDIA QUERIES
-    ========================= */
-@media (max-width: 1700px) and (min-width: 768px) {
+    RESPONSIVE (Mobile)
+========================= */
+@media (max-width: 1024px) {
   .about-section {
-     flex-direction: column;
-     align-items: center;
-     gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .about-text h3 {
-     font-size: 4rem;
-     text-align: center;
-  }
+
   .about-info {
-     flex-direction: row;
-     align-items: center;
-     gap: 40px;
+    flex-direction: column;
+    align-items: center;
   }
+
   .divider-vertical-about {
-     display: none;
+    display: none;
   }
+
+  .download-button {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .right-content {
-     align-items: center;
+    align-items: center;
   }
-  .socials {
-     text-align: center;
-  }
+
   .social-icons {
-     justify-content: center;
+    justify-content: center;
+    margin-top: 24px;
   }
 }
+
 @media (max-width: 768px) {
   /* NAVIGATION */
   .desktop-nav { display: none; }
@@ -856,27 +885,7 @@ p {
      margin: 4px 0;
   }
   .mobile-header { display: flex; }
-  /* ABOUT */
-  .about-section {
-     flex-direction: column;
-     align-items: center;
-     gap: 60px;
-     text-align: center;
-  }
-  .about-text h3 {
-     font-size: 3rem;
-     text-align: center;
-  }
-  .about-info {
-     flex-direction: column;
-     align-items: center;
-     gap: 40px;
-  }
-  .divider-vertical-about { display: none; }
-  .right-content { align-items: center; }
-  .socials { text-align: center; }
-  .social-icons { justify-content: center; }
-  .divider-vertical { display: none; }
+  
   /* WHAT I DO */
   .what-i-do { flex-direction: column; }
   .what-title { margin-bottom: -24px; margin-top: -40px; }
@@ -943,11 +952,4 @@ p {
   .project-subtitle { font-size: 1.5rem; }
   .project-description-title { font-size: 1.8rem; }
   .project-description-text { font-size: 1rem; }
-  .download-button {
-     text-align: center;
-     justify-content: center;
-     width: 96%;
-     margin-top: 20px;
-     gap: 0;
-  }
 }
