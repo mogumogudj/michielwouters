@@ -237,6 +237,7 @@ p {
   align-items: center;
   gap: 40px;
   font-size: 3rem;
+  text-align: center;
 }
 .mobile-menu.open {
   display: flex;
@@ -940,7 +941,7 @@ p {
   .gallery-item:hover .project-hover-overlay { opacity: 1; }
   /* ACADEMIC PAGE */
   .academic-title { font-size: 2.4rem; margin-top: 1rem; }
-  .academic-year { font-size: 0.6rem; right: 308px; top: 44px; margin-top: 2rem; }
+  .academic-year { font-size: 0.5rem; right: 308px; top: 44px; margin-top: 2rem;}
   .project-gallery { flex-direction: column; }
   /* CONTACT SECTION */
   .contact-info { flex-direction: column; align-items: center; text-align: center; }
