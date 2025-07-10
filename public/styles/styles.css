@@ -431,6 +431,22 @@ p {
   border-radius: 50%;
   font-size: 18px;
 }
+/* =========================
+    PORTFOLIO LINK
+    ========================= */
+.go-to-portfolio-link {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 12px 48px;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 32px;
+  font-family: var(--font-custom);
+  font-size: 1.2rem;
+  border: 1px solid var(--primary-color);
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 20px;
+}
 
 /* =========================
     WHAT I DO SECTION
