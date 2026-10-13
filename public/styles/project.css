@@ -115,21 +115,21 @@ p {
 
 .project-home-section {
     text-align: left;
-    padding: 100px 60px 20px;
+    padding: clamp(5rem, 8vw, 100px) clamp(1.25rem, 4vw, 60px) 20px;
 }
 
 .project-home-section .title {
-    font-size: 8rem;
+    font-size: clamp(3rem, 8vw, 8rem);
     font-weight: 200;
-    line-height: 7rem;
+    line-height: 0.95;
     margin-bottom: 1.5rem;
-    text-transform: normal;
+    overflow-wrap: anywhere;
 }
 
 .project-home-section .subtitle {
-    font-size: 3.5rem;
+    font-size: clamp(1.25rem, 4vw, 3.5rem);
     font-weight: 200;
-    line-height: 3.4rem;
+    line-height: 1.1;
     text-transform: uppercase;
 }
 
@@ -172,8 +172,9 @@ p {
     }
 
     .project-home-section .title {
-        font-size: 3.2rem;
-        line-height: 3rem;
+        font-size: clamp(2rem, 8vw, 3.2rem);
+        line-height: 1.05;
+        overflow-wrap: anywhere;
     }
 
     .project-home-section .subtitle {
@@ -317,4 +318,3 @@ p {
         font-size: 1.2rem;
     }
 }
-
