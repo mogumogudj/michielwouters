@@ -1,33 +1,35 @@
 /* =========================
     FONTS & FONT-FACES
     ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
 @font-face {
   font-family: 'Ki';
   src: url('../fonts/Mint\ Type\ -\ Ki-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Ki';
   src: url('../fonts/Mint\ Type\ -\ Ki-LightItalic.otf.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Grand Mighty';
   src: url('../fonts/Grand\ Mighty.otf') format('opentype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'ZT Mostion';
   src: url('../fonts/ZT\ Mostion.otf') format('opentype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Bebas Neue';
   src: url('../fonts/BebasNeuePro-Regular.otf') format('opentype');
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "Ostia Antica WEB";
@@ -37,12 +39,14 @@
          url("https://db.onlinewebfonts.com/t/c288d1a3d0f20ed507f51a58cbfa19f4.woff")format("woff"),
          url("https://db.onlinewebfonts.com/t/c288d1a3d0f20ed507f51a58cbfa19f4.ttf")format("truetype"),
          url("https://db.onlinewebfonts.com/t/c288d1a3d0f20ed507f51a58cbfa19f4.svg#Ostia Antica WEB")format("svg");
+  font-display: swap;
 }
 @font-face {
   font-family: 'Morion';
   src: url('../fonts/morion-bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* =========================

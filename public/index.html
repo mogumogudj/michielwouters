@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michiel Wouters | architect</title>
+    <meta name="description" content="Portfolio of Michiel Wouters, an architect based in Leuven, Belgium, exploring socially sensitive architecture, urban culture and material experimentation.">
+    <meta name="author" content="Michiel Wouters">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://michielwouters.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Michiel Wouters | Architect">
+    <meta property="og:description" content="Portfolio of Michiel Wouters, an architect based in Leuven, Belgium, exploring socially sensitive architecture, urban culture and material experimentation.">
+    <meta property="og:url" content="https://michielwouters.vercel.app/">
+    <meta property="og:image" content="https://michielwouters.vercel.app/images/mik-WEB.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Michiel Wouters | Architect">
+    <meta name="twitter:description" content="Portfolio of Michiel Wouters, an architect based in Leuven, Belgium, exploring socially sensitive architecture, urban culture and material experimentation.">
+    <meta name="twitter:image" content="https://michielwouters.vercel.app/images/mik-WEB.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Michiel Wouters",
+      "jobTitle": "Architect",
+      "email": "mailto:michielwouters@outlook.be",
+      "url": "https://michielwouters.vercel.app/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Leuven",
+        "addressCountry": "BE"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "KU Leuven"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://db.onlinewebfonts.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Matangi:wght@300..900&display=swap">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="images/bbd72876-5d3a-4d9b-889b-1fd9160e806a.jpeg" type="image/jpg">
@@ -49,7 +86,7 @@
 
     <!-- Full Width Image -->
     <section class="hero-image">
-        <img src="images/mik-WEB.png" alt="Michiel Wouters">
+        <img src="images/mik-WEB.png" alt="Michiel Wouters" fetchpriority="high" decoding="async">
     </section>
 
 <!-- About Section -->
@@ -63,7 +100,7 @@
 
         <div class="right-content">
             <div class="spinning-images">
-                <img src="images/test-mik.png" alt="Metallic Butterfly">
+                <img src="images/test-mik.png" alt="Metallic Butterfly" loading="lazy" decoding="async">
             </div>
 
             <div class="socials">
@@ -156,7 +193,7 @@
 
     <!-- Footer Image -->
     <section class="footer-video">
-        <video src="images/Wouters_Michiel_Trailer.mp4" autoplay loop muted playsinline alt="Footer Video"></video>
+        <video data-src="images/Wouters_Michiel_Trailer.mp4" class="lazy-video" autoplay loop muted playsinline preload="none" aria-label="Portfolio showreel"></video>
     </section>
 
     <!-- Final Separator -->

@@ -41,6 +41,42 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const videos = document.querySelectorAll('video.lazy-video');
+    if (!videos.length) return;
+
+    const loadVideo = video => {
+        const directSource = video.dataset.src;
+        if (directSource) {
+            video.src = directSource;
+            delete video.dataset.src;
+        }
+
+        video.querySelectorAll('source[data-src]').forEach(source => {
+            source.src = source.dataset.src;
+            delete source.dataset.src;
+        });
+
+        video.load();
+    };
+
+    if (!('IntersectionObserver' in window)) {
+        videos.forEach(loadVideo);
+        return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadVideo(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '400px 0px' });
+
+    videos.forEach(video => observer.observe(video));
+});
+
 
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -62,111 +98,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// SCROLLING CONTACT
-document.addEventListener('DOMContentLoaded', () => {
-    const about = document.querySelector('.about-section');
-
-    if (!about) return;
-
-    window.addEventListener('scroll', () => {
-        const aboutTop = about.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (aboutTop < windowHeight / 1.2) {
-            about.classList.add('scrolled');
-        } else {
-            about.classList.remove('scrolled');
-        }
-    });
-});
-
-
-
 // SPINNING IMAGE ON SCROLL
-document.addEventListener('scroll', () => {
-    const spinningImage = document.querySelector('.spinning-images img');
-    if (!spinningImage || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+const spinningImage = document.querySelector('.spinning-images img');
+let spinningFrame = null;
 
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const rotation = scrollTop * 0.5; // Adjust the multiplier for speed
+if (spinningImage) {
+    document.addEventListener('scroll', () => {
+        if (spinningFrame || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    spinningImage.style.transform = `rotate(${rotation}deg)`;
-});
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const aboutText = document.querySelector('.about-text');
-
-    if (!aboutText) return;
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                aboutText.classList.add('animate');
-            } else {
-                aboutText.classList.remove('animate'); // Reset animation when out of view
-            }
+        spinningFrame = requestAnimationFrame(() => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            spinningImage.style.transform = `rotate(${scrollTop * 0.5}deg)`;
+            spinningFrame = null;
         });
-    }, { threshold: 0.6 });
-
-    observer.observe(aboutText);
-});
-
-
-
+    }, { passive: true });
+}
 
 // Select the image
 const heroImage = document.querySelector('.hero-image img');
 const heroSection = document.querySelector('.hero-image');
+let heroFrame = null;
 
-window.addEventListener('scroll', () => {
-    if (!heroImage || !heroSection || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+if (heroImage && heroSection) {
+    const updateHeroScale = () => {
+        if (heroFrame || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const rect = heroSection.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+        heroFrame = requestAnimationFrame(() => {
+            const rect = heroSection.getBoundingClientRect();
+            const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+            const scale = Math.max(1, 1.2 - (distanceFromCenter / window.innerHeight) * 0.4);
+            heroImage.style.transform = `scale(${scale})`;
+            heroFrame = null;
+        });
+    };
 
-    // Calculate how far the section is from the center of the viewport
-    const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - windowHeight / 2);
-
-    // Calculate zoom scale: max scale when centered, min when scrolled away
-    let scale = 1.2 - (distanceFromCenter / windowHeight) * 0.4; // adjust 1.2 and 0.4 for intensity
-
-    // Clamp scale so it doesn't go below 1
-    if (scale < 1) scale = 1;
-
-    // Apply zoom effect
-    heroImage.style.transform = `scale(${scale})`;
-});
-
-
-
-
-
-// Project page
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.project-img');
-    images.forEach((image, index) => {
-        image.style.animation = `fadeInUp 1s ease-out ${index * 0.2}s forwards`;
-    });
-});
-
-// Animation on scroll
-document.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const projectText = document.querySelector('.project-text');
-    const projectImages = document.querySelectorAll('.project-img');
-
-    if (!projectText) return;
-
-    if (projectText.getBoundingClientRect().top < scrollPosition) {
-        projectText.classList.add('animate');
-    }
-
-    projectImages.forEach((image) => {
-        if (image.getBoundingClientRect().top < scrollPosition) {
-            image.classList.add('animate');
-        }
-    });
-});
+    window.addEventListener('scroll', updateHeroScale, { passive: true });
+    window.addEventListener('resize', updateHeroScale, { passive: true });
+}

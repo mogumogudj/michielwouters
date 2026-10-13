@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project | Revisiting Railway Station Brussels Congres</title>
+    <meta name="description" content="Revisiting Railway Station Brussels Congres proposes reviving Passage 44 as a civic space for community exchange and urban reconnection.">
+    <meta name="author" content="Michiel Wouters">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://michielwouters.vercel.app/projects/RevisitingCongresStation.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Revisiting Brussels Congres Station | Michiel Wouters">
+    <meta property="og:description" content="A design project reimagining Passage 44 as a civic space for community exchange and urban reconnection.">
+    <meta property="og:url" content="https://michielwouters.vercel.app/projects/RevisitingCongresStation.html">
+    <meta property="og:image" content="https://michielwouters.vercel.app/images/Master/Master1/3.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://db.onlinewebfonts.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Matangi:wght@300..900&display=swap">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/project.css">
     <script defer src="../project.js"></script>
@@ -59,21 +74,21 @@
     <!-- Image Grid -->
 <section class="project-image-grid">
     <div class="project-image-grid-item">
-        <video controls class="project-grid-image">
-            <source src="../images/Master/Master1/1.mp4" type="video/mp4">
+        <video controls class="project-grid-image lazy-video" preload="none">
+            <source data-src="../images/Master/Master1/1.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <span class="project-image-grid-caption">Unactivated movie</span>
     </div>
     <div class="project-image-grid-item">
-        <video controls class="project-grid-image">
-            <source src="../images/Master/Master1/2.mp4" type="video/mp4">
+        <video controls class="project-grid-image lazy-video" preload="none">
+            <source data-src="../images/Master/Master1/2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <span class="project-image-grid-caption">Activated movie</span>
     </div>
     <div class="project-image-grid-item">
-        <img src="../images/Master/Master1/3.png" alt="Project Image 3" class="project-grid-image">
+        <img src="../images/Master/Master1/3.png" alt="Project Image 3" class="project-grid-image" loading="lazy" decoding="async">
         <span class="project-image-grid-caption">Poster</span>
     </div>
 
@@ -114,6 +129,5 @@
     </footer>
 
     <script src="../main.js"></script>
-    <script src="../project.js"></script>
 </body>
 </html>
